@@ -6,12 +6,23 @@ export const metadata: Metadata = {
 
 };
 
+// не потрібно тут використовувати generateMetadata
+// export const generateMetadata =async ({params}:{params:{id:string}}):Promise<Metadata>=>{
+//     // робимо User 1.2.. і рендимо його-достаємододоэмо обьэкт({params})
+//     const  {id} = await params;
+//     console.log(id);
+//     return {
+//
+//         title: "User page title"+ id,//як логотип сторінки використовується
+//     }
+// }
+
 type Props={children: React.ReactNode;};
 const UsersLayout = ({children}:Props) => {
     return (
         <div>
             <hr/>
-           user Layout id
+
             {children}
             <hr/>
         </div>

@@ -11,7 +11,7 @@ const UserLayout = ({children}:Props) => {
     return (
         <div>
             <hr/>
-           Users Layout
+
             {children}
             <hr/>
         </div>
