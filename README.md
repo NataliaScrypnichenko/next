@@ -35,35 +35,27 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+    import type {Metadata} from "next";
+    import React from 'react';
 
-вся обробка формуєтся за назвою деректорією APP? то вній формуємо папку яка і буде назвою шляху .
-page.tsx в ньому міститься надписи на сторінці,а в layout.tsx містить фон
-Якщо в проєкті є page.tsx то відображається він (layout.tsx-не являється обов'язковим)
-Яко існує layout.tsx то він буде відображати layout.tsx і в себе відображати пропсу children підтягувати  page.tsx
-,тобто компонувати він робить це самостійно.
-шаблон
+     export const metadata: Metadata = {
+         title: "UsersLayout metadata",
 
-        export default function RootLayout({
-         children,
-           }: Readonly<{
-              children: React.ReactNode;
-                  }>) {
-                   return (
-              <html lang="en">
-                  <body className={`${geistSans.variable} ${geistMono.variable}`}>
-             {children}
-                    </body>
-             </html>
-           );
-         }
-В одному layout.tsx можуть рендитися всі підрівні юзер..юзер.
+          };
 
-Але на кожному субрівні наших юарел може існувати свій layout.tsx,але він не заміняє головного layout.tsx він
-завжди доповнює тобто нашаровує його
+           type Props={children: React.ReactNode;};
+           const UsersLayout = ({children}:Props) => {
+              return (
+                  <div>
+                   
+                        user Layout id
+                            {children}
+                       
+               </div>
+              );
+            };
 
-в головному layout.tsx лежать створені в папці створені about page.tsx layout.tsx
-
-1/4 створюємо ще одну деректорію conatcs з якою ми будемо працювати 
-частина тина шляху це створити нову папку а в неї положити  папку conatcs і about ,і тоді потрібно прописувати шлях в браузері /нова папка/conatcs
-а щоб так не робити то назву папки пишемо в круглих душках(...) і ця папка буде доступна зацьою урлою як і папка /conatcs
-зкомпонувати так щоб не було частиною шляху -це 
+export default UsersLayout;
+створюємо папку юзерів і хочемо мати юзер1,3,4,.... і  обробники на нього,працюємо ведими даними власноруч,
+динамічні сигменти повині бути названі в [id]/будуватися урла буде /users/id?і тепер чи можемо ми від хопити із цюго шляху
+ Ми повині типізувати в папкі [id]user\pade
