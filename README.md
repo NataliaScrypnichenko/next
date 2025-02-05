@@ -36,3 +36,29 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
+вся обробка формуєтся за назвою деректорією APP? то вній формуємо папку яка і буде назвою шляху .
+page.tsx в ньому міститься надписи на сторінці,а в layout.tsx містить фон
+Якщо в проєкті є page.tsx то відображається він (layout.tsx-не являється обов'язковим)
+Яко існує layout.tsx то він буде відображати layout.tsx і в себе відображати пропсу children підтягувати  page.tsx
+,тобто компонувати він робить це самостійно.
+шаблон
+
+        export default function RootLayout({
+         children,
+           }: Readonly<{
+              children: React.ReactNode;
+                  }>) {
+                   return (
+              <html lang="en">
+                  <body className={`${geistSans.variable} ${geistMono.variable}`}>
+             {children}
+                    </body>
+             </html>
+           );
+         }
+В одному layout.tsx можуть рендитися всі підрівні юзер..юзер.
+
+Але на кожному субрівні наших юарел може існувати свій layout.tsx,але він не заміняє головного layout.tsx він
+завжди доповнює тобто нашаровує його
+
+в головному layout.tsx лежать створені в папці створені about page.tsx layout.tsx
