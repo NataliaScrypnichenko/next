@@ -41,3 +41,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
  Сама page як по принципу реакт роултер не буде працювати з АРІ вона буде відтворювати компоненти,
 який займається цією логікою,компонент повинен буде трігати якийсь сервіс .Відповідно ми формуємо деректорію services, потім models=>IUser,
  потім components=>users
+
+2/2
+передаємо інформацію про конкретного коростувача на конк.page контексті [id]=>page міняємо type Props={
+         params:Promise<{id:string}>;
+             searchParams: Promise<SearchParams>;//відхоплює що знаходиться в урлі
+                 }
+потім прописуємо і наповнюємо їх із сторінки де існують юзери і ми клікаємо на них це users/page=>UsersComponent
