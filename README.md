@@ -33,6 +33,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more detail
 
+яким чином збираэмо дані в нексті тобто отримувати від користувача данні через формудля того щоб потім щось зробити
+фетч запит 
+Фоми тут можуть використовувати двома способами
+1.серверні діїї і їх мутації-потім
+2. Зараз просто збирання інформації
+Якщо будемо шукати окремо по запиту некст.джс форми то відразу будемо потрапляти на сторінку сервер екшен 
 
+зараз інформація переходить із сторінки на сторінку
+Звичайна форма на нексті це- гітові запити з переходом на якусь сторінку і можна використолвувати 
