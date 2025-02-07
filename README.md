@@ -36,3 +36,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
+
+Створити структуру сторінок для відображення користувачів, постів, комментарів з джейсонплейсхолдеру.
+/users - відобразити список юзерів з активною лінкою
+/posts -відобразити список постів з активною лінкою
+/comments -відобразити список комментарів з активною лінкою
+/users/id - відобразити певного юзера
+/posts/id-відобразити певний пост
+/comments/id - відобразити певний комментар
