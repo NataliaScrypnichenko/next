@@ -36,3 +36,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 створення маршрутів не руками прописувати урли
+2.1
+коли нажимаєш на users відображається users page context і щоб там відобразилося всі користувачі
+ Сама page як по принципу реакт роултер не буде працювати з АРІ вона буде відтворювати компоненти,
+який займається цією логікою,компонент повинен буде трігати якийсь сервіс .Відповідно ми формуємо деректорію services, потім models=>IUser,
+ потім components=>users
