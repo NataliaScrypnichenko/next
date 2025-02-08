@@ -1,8 +1,9 @@
 import {createCar} from "@/service/carService";
-import {useState} from "react";
+import { useState } from 'react';
 
 
-const CreateCarPage = () => {
+
+ const CreateCarPage = () => {
     const [brand, setBrand] = useState('');
     const [price, setPrice] = useState('');
     const [year, setYear] = useState('');
@@ -34,40 +35,22 @@ const CreateCarPage = () => {
         <div>
             <h1>Create New Car</h1>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>
-                        Brand:
-                        <input
-                            type="text"
-                            value={brand}
-                            onChange={(e) => setBrand(e.target.value)}
-                            placeholder="Enter car brand"
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Price:
-                        <input
-                            type="number"
-                            value={price}
-                            onChange={(e) => setPrice(e.target.value)}
-                            placeholder="Enter car price"
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Year:
-                        <input
-                            type="number"
-                            value={year}
-                            onChange={(e) => setYear(e.target.value)}
-                            placeholder="Enter car year"
-                        />
-                    </label>
-                </div>
-                <button type="submit">Create Car</button>
+                <ul>
+                    <li>Brand:
+                        <input type="text" value={brand} onChange={(e) => setBrand(e.target.value)} placeholder="Enter car brand"/>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Price:
+                        <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Enter car price"/>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Year:
+                        <input type="number" value={year} onChange={(e) => setYear(e.target.value)} placeholder="Enter car year"/>
+                    </li>
+                </ul>
+                    <button type="submit">Create Car</button>
             </form>
         </div>
     );
