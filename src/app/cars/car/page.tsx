@@ -10,24 +10,25 @@ const CreateCarPage = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Перевірка заповнення форми
         if (!brand || !price || !year) {
             alert('Please fill in all fields');
             return;
         }
 
-        // Створення нового об'єкта автівки
         const newCar = { brand, price: Number(price), year: Number(year) };
 
         try {
-            // Відправка даних на сервер для створення нової автівки
             await createCar(newCar);
             alert('Car created successfully!');
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch (error) {
-            alert('Error creating car');
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                alert(`Error creating car: ${error.message}`);
+            } else {
+                alert('Error creating car');
+            }
         }
     };
+
 
     return (
         <div>
