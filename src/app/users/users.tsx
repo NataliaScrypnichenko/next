@@ -1,3 +1,4 @@
+import {IUser} from "@/app/model/IUser";
 
 const UsersPage = async () => {
     const users = await fetch("http://jsonplaceholder.typicode.com/users")
@@ -5,8 +6,11 @@ const UsersPage = async () => {
 
     return (
         <div>
-            {users.map((user: {id:number,name:string }) =>
-                (<div key={user.id}>{user.name}</div>))}
+            {
+                users.map((user:IUser) => (<div key={user.id}>
+                    {user.username}
+                </div>))
+            }
         </div>
     );
 };
