@@ -1,9 +1,8 @@
-import {IUser} from "@/app/model/IUser";
+import {IUser} from "@/components/model/IUser";
 
-const UsersPage = async () => {
+ const UsersPage = async () => {
 
-      const users = await  fetch('https://localhost:3000/users/api')
-          .then((res) => res.json());
+      const users = await fetch('http://localhost:3000/users/api').then((res) => res.json());
 
     return (
         <div>
